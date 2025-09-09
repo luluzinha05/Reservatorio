@@ -1,0 +1,14 @@
+Simulation domain configuration: slab2D
+Number of Gaussian parameter: 1
+Beta parameter of the permeability field: 9.8692e-14
+Rho (strength) parameter of the permeability field: 1.0
+Water viscosity (mu): 1.0e-03
+Domain size: 100.0 100.0 1.0
+Computational mesh: 50 50 10
+Bottom hole pressure (BHP): 101325.0
+Right side Dirichlet pressure: 0.0
+Left side Dirichlet pressure: 1000.0
+Well radius (rw): 1.25e-01
+Production rate (q): 1.0e02
+Monitor cell positions: 0, 5, 10, 15, 20, 1, 6, 11, 16, 21, 2, 7, 12, 17, 22, 3, 8, 13, 18, 23, 4, 9, 14, 19, 24
+Path to save parameter 0: ./YS_amostra.dat
