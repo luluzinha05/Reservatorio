@@ -2,6 +2,7 @@
 # Import libraries
 ####################################################################
 import numpy as np
+
 from mpi4py import MPI
 from tools import input_simulation_parameters
 from tools import DirichletBC3D
@@ -72,8 +73,6 @@ if rank == 1:
 
     comm.send(data_to_send, dest=0)
 
-####################################################################
-# Rank 0: recebe e mostra a solucao
 ####################################################################
 elif rank == 0:
     data_received = comm.recv(source=1)
