@@ -20,12 +20,21 @@ comm = MPI.COMM_WORLD
 rank = comm.Get_rank()
 ####################################################################
 
+internal_simulpar=input_simulation_parameters('simulation_input2.in')
+
+# Variaveis globais para armazenar os deltas de nx, ny, nz e Lx, Ly, Lz
+    Gnx = internal_simulpar.mesh[0] 
+    Gny = internal_simulpar.mesh[1] 
+    Gnz = internal_simulpar.mesh[2]
+
+    GLx = internal_simulpar.Dom[0]
+    GLy = internal_simulpar.Dom[1]
+    GLz = internal_simulpar.Dom[2]
+
 ####################################################################
 # Rank 1: carrega dados, executa e envia
 ####################################################################
 if rank == 1:
-
-    internal_simulpar=input_simulation_parameters('simulation_input2.in')
 
     nx = internal_simulpar.mesh[0]
     ny = internal_simulpar.mesh[1]

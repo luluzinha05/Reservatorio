@@ -1004,9 +1004,9 @@ def coordinates2D(nx, ny, Lx, Ly):
 ###############################################################################
 def coordinates3D(nx, ny, nz, Lx, Ly, Lz):
     '''Generate the grid coordinates'''
-    dx = Lx / nx
-    dy = Ly / ny
-    dz = Lz / nz
+    dx = GLx / Gnx
+    dy = GLy / Gny
+    dz = GLz / Gnz
     
     x = np.linspace(dx/2, Lx-dx/2, nx)
     y = np.linspace(dy/2, Ly-dy/2, ny)
